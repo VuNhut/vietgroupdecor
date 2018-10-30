@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-admin/
+Disallow: /?s=*
+Disallow: *?replytocom
+Disallow: */attachment/*
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+Disallow: /go/
+
+Sitemap: http://matonghoathiennhien.vn/sitemap_index.xml
