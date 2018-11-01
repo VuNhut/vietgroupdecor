@@ -72,7 +72,7 @@ get_header( 'shop' ); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-8 item-vemaybay">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-8 item-decor">
 	                  <div class="hservice">
 	                  <ul>
 	                    <li class="noneli">
@@ -84,10 +84,7 @@ get_header( 'shop' ); ?>
 	                      </div>
 	                      <div class="thong-tin-sp">
 	                        <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-	                        <?php the_excerpt(); ?>
 	                      </div>
-	                      <a href="<?php the_permalink(); ?>" class="btn btn-default product_type_simple add_to_cart_btn btn-default ajax_add_to_cart">Xem chi tiết</a>
-	                      <div style="clear:both"></div>
 	                    </li>
 	                  </ul>
 	                  </div>

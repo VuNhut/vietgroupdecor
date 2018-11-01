@@ -17,9 +17,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link rel="shortcut icon" type="image/x-icon" href="<?php echo home_url(); ?>/wp-content/themes/vietgroupdecor/images/favicon-matonghoa.png">
-<script type="text/javascript" src="<?php echo home_url(); ?>/wp-content/themes/vietgroupdecor/javascript/jquery-1.7.1.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 <?php wp_head(); ?>
 <script type="text/javascript">
 	$(document).scroll(function() {
@@ -52,9 +50,7 @@
 				<?php if( !get_header_image() ) : ?>
 
 				<div id="logo">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2015/08/logo-matonghoa.png" alt="mật ong hoa thiên nhiên" />
-                    </a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
                 </div><!-- end of #logo -->
 
                 <?php endif; // header image was removed (again) ?>
@@ -75,7 +71,7 @@
 			</form>
             <div class="hotline-mobile">
             	<span class="hotro-dathang">Hỗ trợ & Đặt hàng:</span>
-            	<span><i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:0946410840"> 0946 410 840</a> <i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:0911406539"> 0911 406 539</a></span>
+            	<span><i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:0946410840"> 0946 410 840</a></span>
             </div>
 		</div>
 		<?php dazzling_header_menu(); ?>

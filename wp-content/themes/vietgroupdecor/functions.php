@@ -152,6 +152,16 @@ function dazzling_widgets_init() {
     'after_title'   => '</h3>',
   ));
 
+  register_sidebar(array(
+    'id'            => 'footer-widget-4',
+    'name'          =>  __( 'Footer Widget 4', 'dazzling' ),
+    'description'   =>  __( 'Used for footer widget area', 'dazzling' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3 class="widgettitle">',
+    'after_title'   => '</h3>',
+  ));
+
 
   register_widget( 'dazzling_popular_posts_widget' );
 }

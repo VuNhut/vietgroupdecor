@@ -15,20 +15,40 @@
 	?>
 	<div class="footer-widget-area">
 		<?php if ( is_active_sidebar( 'footer-widget-1' ) ) : ?>
-		<div class="col-sm-8 col-md-9 footer-widget" role="complementary">
+		<div class="col-sm-2 footer-widget" role="complementary">
 			<?php dynamic_sidebar( 'footer-widget-1' ); ?>
+			<ul class="social">
+				<li>
+					<a href="#"class="social_link"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+				</li>
+				<li>
+					<a href="#"class="social_link"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
+				</li>
+				<li>
+					<a href="#"class="social_link"><i class="fa fa-skype fa-2x" aria-hidden="true"></i></a>
+				</li>
+				<li>
+					<a href="#"class="social_link"><i class="fa fa-phone-square fa-2x" aria-hidden="true"></i></a>
+				</li>
+			</ul>
 		</div><!-- .widget-area .first -->
 		<?php endif; ?>
 
 		<?php if ( is_active_sidebar( 'footer-widget-2' ) ) : ?>
-		<div class="col-sm-4 col-md-3 footer-widget" role="complementary">
+		<div class="col-sm-4 footer-widget" role="complementary">
 			<?php dynamic_sidebar( 'footer-widget-2' ); ?>
 		</div><!-- .widget-area .second -->
 		<?php endif; ?>
 
 		<?php if ( is_active_sidebar( 'footer-widget-3' ) ) : ?>
-		<div class="col-sm-6 col-md-3 footer-widget" role="complementary">
+		<div class="col-sm-2 footer-widget" role="complementary">
 			<?php dynamic_sidebar( 'footer-widget-3' ); ?>
+		</div><!-- .widget-area .third -->
+		<?php endif; ?>
+
+		<?php if ( is_active_sidebar( 'footer-widget-4' ) ) : ?>
+		<div class="col-sm-4 footer-widget" role="complementary">
+			<?php dynamic_sidebar( 'footer-widget-4' ); ?>
 		</div><!-- .widget-area .third -->
 		<?php endif; ?>
 	</div>

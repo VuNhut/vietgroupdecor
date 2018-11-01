@@ -1,0 +1,50 @@
+2018-11-01T14:24:49+00:00 CRITICAL Uncaught Error: Call to undefined function get_sale_price() in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php:80
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\front-page.php(4): get_template_part('index')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\vietgroupdecor\index.php(17): require('D:\\xampp\\htdocs...')
+#7 {main}
+  thrown in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 80
+
+2018-11-01T14:28:18+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on null in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php:80
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\front-page.php(4): get_template_part('index')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\vietgroupdecor\index.php(17): require('D:\\xampp\\htdocs...')
+#7 {main}
+  thrown in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 80
+
+2018-11-01T14:28:32+00:00 CRITICAL Uncaught Error: Call to undefined function get_price_html() in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php:80
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\front-page.php(4): get_template_part('index')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\vietgroupdecor\index.php(17): require('D:\\xampp\\htdocs...')
+#7 {main}
+  thrown in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 80
+
+2018-11-01T14:30:55+00:00 CRITICAL syntax error, unexpected ';', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\functions.php on line 297
+
+2018-11-01T15:13:02+00:00 CRITICAL Uncaught Error: Call to undefined function get_post_thumbnail() in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php:76
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\front-page.php(4): get_template_part('index')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\vietgroupdecor\index.php(17): require('D:\\xampp\\htdocs...')
+#7 {main}
+  thrown in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 76
+
