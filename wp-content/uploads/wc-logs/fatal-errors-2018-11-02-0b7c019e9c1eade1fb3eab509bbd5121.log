@@ -1,0 +1,142 @@
+2018-11-02T14:34:20+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on null in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\woocommerce\archive-product.php:85
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-content\plugins\woocommerce\templates\taxonomy-product_cat.php(22): wc_get_template('archive-product...')
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\vietgroupdecor\index.php(17): require('D:\\xampp\\htdocs...')
+#5 {main}
+  thrown in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\woocommerce\archive-product.php on line 85
+
+2018-11-02T14:35:09+00:00 CRITICAL syntax error, unexpected ';', expecting ',' or ')' in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\woocommerce\archive-product.php on line 73
+
+2018-11-02T14:40:45+00:00 CRITICAL syntax error, unexpected ''post_type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 66
+
+2018-11-02T14:45:30+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on boolean in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php:84
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\front-page.php(4): get_template_part('index')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\vietgroupdecor\index.php(17): require('D:\\xampp\\htdocs...')
+#7 {main}
+  thrown in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 84
+
+2018-11-02T14:49:32+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on boolean in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php:91
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\front-page.php(4): get_template_part('index')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\vietgroupdecor\index.php(17): require('D:\\xampp\\htdocs...')
+#7 {main}
+  thrown in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 91
+
+2018-11-02T14:50:35+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on boolean in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php:91
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\front-page.php(4): get_template_part('index')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\vietgroupdecor\index.php(17): require('D:\\xampp\\htdocs...')
+#7 {main}
+  thrown in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 91
+
+2018-11-02T14:54:11+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on boolean in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php:84
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\front-page.php(4): get_template_part('index')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\vietgroupdecor\index.php(17): require('D:\\xampp\\htdocs...')
+#7 {main}
+  thrown in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 84
+
+2018-11-02T14:56:18+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on boolean in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php:85
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\front-page.php(4): get_template_part('index')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\vietgroupdecor\index.php(17): require('D:\\xampp\\htdocs...')
+#7 {main}
+  thrown in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 85
+
+2018-11-02T14:58:11+00:00 CRITICAL syntax error, unexpected ''cat'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 67
+
+2018-11-02T15:01:07+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on boolean in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php:92
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\front-page.php(4): get_template_part('index')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\vietgroupdecor\index.php(17): require('D:\\xampp\\htdocs...')
+#7 {main}
+  thrown in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 92
+
+2018-11-02T15:02:24+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on boolean in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php:91
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\front-page.php(4): get_template_part('index')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\vietgroupdecor\index.php(17): require('D:\\xampp\\htdocs...')
+#7 {main}
+  thrown in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 91
+
+2018-11-02T15:02:43+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on boolean in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php:84
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\front-page.php(4): get_template_part('index')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\vietgroupdecor\index.php(17): require('D:\\xampp\\htdocs...')
+#7 {main}
+  thrown in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 84
+
+2018-11-02T16:00:23+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function add_percentage_to_sale_badge(), 2 passed in D:\xampp\htdocs\vietgroupdecor\wp-includes\class-wp-hook.php on line 286 and exactly 3 expected in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\functions.php:305
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-includes\class-wp-hook.php(286): add_percentage_to_sale_badge(Object(WP_Post), Object(WC_Product_Simple))
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\plugin.php(203): WP_Hook->apply_filters(Object(WP_Post), Array)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php(215): apply_filters('woocommerce_sal...', Object(WP_Post), Object(WC_Product_Simple))
+#3 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#5 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, fa in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\functions.php on line 305
+
+2018-11-02T16:00:35+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function apply_filters(), 1 passed in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php on line 215 and exactly 2 expected in D:\xampp\htdocs\vietgroupdecor\wp-includes\plugin.php:176
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\index.php(215): apply_filters('woocommerce_sal...')
+#1 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(690): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\vietgroupdecor\wp-includes\template.php(647): load_template('D:\\xampp\\htdocs...', false)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#4 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\front-page.php(4): get_template_part('index')
+#5 D:\xampp\htdocs\vietgroupdecor\wp-includes\template-loader.php(74): include('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\vietgroupdecor\wp-blog-header.php(19): require_once('D:\\xampp\\htdocs...')
+#7 D:\x in D:\xampp\htdocs\vietgroupdecor\wp-includes\plugin.php on line 176
+
+2018-11-02T17:15:46+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::is_on_sale() in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\woocommerce\single-product\related.php:43
+Stack trace:
+#0 D:\xampp\htdocs\vietgroupdecor\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include()
+#1 D:\xampp\htdocs\vietgroupdecor\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1833): wc_get_template('single-product/...', Array)
+#2 D:\xampp\htdocs\vietgroupdecor\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1796): woocommerce_related_products(Array)
+#3 D:\xampp\htdocs\vietgroupdecor\wp-includes\class-wp-hook.php(286): woocommerce_output_related_products('')
+#4 D:\xampp\htdocs\vietgroupdecor\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#5 D:\xampp\htdocs\vietgroupdecor\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#6 D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\woocommerce\content-single-product.php(80): do_action('wooco in D:\xampp\htdocs\vietgroupdecor\wp-content\themes\vietgroupdecor\woocommerce\single-product\related.php on line 43
+

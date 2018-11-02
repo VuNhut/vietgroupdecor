@@ -61,29 +61,31 @@ body.single-product, body.woocommerce-page {
   float: left;
   margin: 10px 0 0 10px;
 }
-.top-section .tin-tuc {
+.top-section .tin-tuc, .title-decor {
   border-bottom: 3px solid #f69021;
 }
-.top-section .tin-tuc h2 {
-  font-size: 16px;
+.top-section .tin-tuc h2, .title-decor h2 {
+  font-size: 18px;
   color: #fff;
   float: left;
-  padding: 10px 10px 8px;
+  padding: 10px 15px 8px;
   margin: 0;
   background: #603813;
-  line-height: 16px;
+  line-height: 18px;
   text-transform: uppercase;
   text-align: center;
 }
-.top-section .tin-tuc b {
+.top-section .tin-tuc b, .title-decor b {
   float: left;
   width: 0;
   height: 0;
   border-left: 0 solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 34px solid #f69021;
+  border-bottom: 36px solid #f69021;
 }
-
+.boxso .title-decor {
+  margin: 20px 5px;
+}
 .news-info {
   background: #ffffff;
   padding: 0 10px;
@@ -92,7 +94,7 @@ body.single-product, body.woocommerce-page {
 .news-info .info {
   padding: 8px 0 7px 0;
   border-bottom: 1px solid #eee;
-  height: 85px;
+  height: 84px;
   overflow: hidden;
 }
 
@@ -819,7 +821,7 @@ a.social_link:hover {
   text-align: right;
 }
 .hotline-mobile {
-  float: left;
+  float: right;
   font-size: 18px;
   font-weight: bold;
   color: #111;
@@ -844,7 +846,7 @@ a.social_link:hover {
   float: left;
 }
 .navbar.navbar-default .container .woocommerce-product-search {
-  margin: 20px 50px;
+  margin: 20px 50px 20px 100px;
 }
 .navbar.navbar-default .container .woocommerce-product-search .search-field {
   width: 300px;
@@ -1482,19 +1484,14 @@ h3.s-sub {
     width: 1170px;
     margin: auto;
 }
-.hservice ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 .boxso .container .row {
     margin-left: -5px;
     margin-right: -5px;
 }
 .item-decor {
-  padding: 0 5px;
+  padding: 0 10px;
 }
-.woocommerce-page .item-decor {
+.woocommerce-page .item-decor .hservice {
   border: 1px solid #eee;
 }
 h2.main-title {
@@ -1518,10 +1515,24 @@ h2.main-title {
   background: #ffffff;
   margin-bottom: 10px;
 }
+.hservice .onsale {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: bold;
+  background-image: linear-gradient(50deg,#ec1f1f 0%,#ff9c00 100%);
+  border-radius: 100%;
+  padding: 5px;
+  z-index: 10;
+}
 .hservice .block-image {
+  position: relative;
   text-align: center;
 }
 .hservice .thong-tin-sp {
+  position: relative;
   padding: 5px 10px;
 }
 .hservice .thong-tin-sp h4 {
@@ -1534,6 +1545,24 @@ h2.main-title {
   font-size: 18px;
   line-height: 18px;
 }
+.hservice .saved-sale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -17px;
+  font-size: 14px;
+  color: #fff;
+  background-image: linear-gradient(-20deg,#ec1f1f 0%,#ff9c00 100%);
+  border-radius: 10px;
+  padding: 0 7px 0;
+}
+.hservice .saved-sale span {
+  font-size: 16px;
+}
+.hservice .saved-sale strong {
+  margin-right: 5px;
+}
 .hservice .thong-tin-sp del span {
   color: #999;
   font-size: 16px;
@@ -1545,6 +1574,7 @@ h2.main-title {
 }
 .ih-item {
     position: relative;
+    padding: 5px 15px;
     -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     transition: all 0.35s ease-in-out;
@@ -1557,18 +1587,18 @@ h2.main-title {
     -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     transition: all 0.35s ease-in-out;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
 }
-.ih-item a:hover .img {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
+.hservice a:hover .ih-item .img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
 .hservice h4 a {
     font-size: 17px;
@@ -1676,15 +1706,19 @@ div.wpcf7 {
   padding: 0 0 5px 0;
   border-bottom: 1px solid #eee;
 }
-.woocommerce div.product p.price {
+.woocommerce div.product .entry-summary p.price {
   color: #444;
   font-size: 15px;
   margin: 0;
 }
-.woocommerce div.product p.price span {
+.woocommerce div.product .entry-summary p.price span {
   color: #d0021b;
   font-size: 24px;
   font-weight: bold;
+}
+.woocommerce div.product p.price, .woocommerce div.product span.price {
+  color: inherit;
+  font-size: inherit;
 }
 .product_meta .sku_wrapper {
   margin-right: 15px;

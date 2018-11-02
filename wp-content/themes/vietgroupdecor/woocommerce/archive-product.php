@@ -70,27 +70,34 @@ get_header( 'shop' ); ?>
 
 				<?php woocommerce_product_subcategories(); ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+				<div class="container">
+					<div class="row">
 
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-8 item-decor">
-	                  <div class="hservice">
-	                  <ul>
-	                    <li class="noneli">
-	                      <div class="block-image">
-	                          <div class="ih-item"><a href="<?php the_permalink(); ?>">
-	                              <div class="img"><?php the_post_thumbnail(); ?></div>
-	                              </a>
-	                          </div>
-	                      </div>
-	                      <div class="thong-tin-sp">
-	                        <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-	                      </div>
-	                    </li>
-	                  </ul>
-	                  </div>
-	              </div>
+				<?php while ( have_posts() ) : the_post(); $product = wc_get_product( get_the_ID() ); ?>
+					
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-decor">
+						<div class="hservice">
+							<a href="<?php the_permalink(); ?>">
+								<div class="block-image">
+									<?php if ( $product->is_on_sale() ) : ?>
+										<?php echo apply_filters( 'woocommerce_sale_flash', '', $post, $product ); ?>
+									<?php endif; ?>
+									<div class="ih-item">
+										<div class="img"><?php the_post_thumbnail('size-custom', array('sizes' => '(max-width: 768px) 300px, (max-width: 992px) 250px, 200px')); ?></div>
+									</div>
+								</div>
+								<div class="thong-tin-sp">
+									<h4><?php the_title(); ?></h4>
+									<p class="price"><?php echo $product->get_price_html(); ?></p>
+								</div>
+							</a>
+						</div>
+					</div>
 
 				<?php endwhile; // end of the loop. ?>
+
+					</div>
+				</div>
 
 			<?php woocommerce_product_loop_end(); ?>
 

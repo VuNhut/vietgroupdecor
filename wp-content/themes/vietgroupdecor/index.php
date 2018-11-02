@@ -25,13 +25,14 @@ get_header(); ?>
 			<div class="news-info">
 				<?php
 	                $the_query = new WP_Query(
-	                    array
-	                        (
-	                            'post_type' => 'post',
-	                            'posts_per_page' => 3,
-	                        )
+	                    array (
+							'cat' => 441,
+							'post_type' => 'post',
+							'posts_per_page' => 3,
+	                    )
 	                );
-	                $i = 0;
+					$i = 0;
+					if ($the_query->have_posts()) :
 	                while ( $the_query->have_posts() ) {
 	                    $the_query->the_post();
 	                    $i++;
@@ -42,51 +43,193 @@ get_header(); ?>
 						<p>Ngày đăng: <?php echo get_the_date( 'd/m/Y' ); ?></p>
 					</div>
 					<div class="img-news">
-						<?php the_post_thumbnail( 'dazzling-featured'); ?>
+						<?php the_post_thumbnail(array(109, 69)); ?>
 					</div>
 					<div style="clear:both"></div>
 				</div>
-				<?php } ?>
+				<?php } endif; wp_reset_postdata(); ?>
 			</div>
 		</div>
 		<div style="clear:both"></div>
 	</div>
 	<div class="boxso" class="content-area">
       	<div class="container">
-          	<div class="row gallery">
+          	<div class="row">
+			  <div class="title-decor">
+				<h2><?php if( $term = get_term_by( 'id', 455, 'product_cat' ) ){ echo $term->name; } ?></h2>
+					<b></b>
+					<div style="clear:both"></div>
+				</div>
             	<?php
 					$the_query = new WP_Query(
-						array
-							(
-								'post_type' => 'product',
-								'posts_per_page' => 3,
-							)
+						array (
+							'post_type' => 'product',
+							'posts_per_page' => 4,
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'product_cat',
+									'field' => 'term_id',
+									'terms' => 455
+								)
+							),
+						)
 					);
-					$currency = get_woocommerce_currency_symbol();
-					foreach($the_query->posts as $p):
-						$pid = $p->ID;
-						$product = wc_get_product( $pid );
+					if($the_query->have_posts()) :
+						while ($the_query->have_posts() ) : $the_query->the_post();
+							$product = wc_get_product( get_the_ID() );
               	?>
-              	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-8 item-decor">
-                  	<div class="hservice">
-						<ul>
-							<li class="noneli">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-decor">
+						<div class="hservice product">
+							<a href="<?php the_permalink(); ?>">
 								<div class="block-image">
-									<div class="ih-item"><a href="<?php echo get_permalink($pid); ?>">
-										<div class="img"><?php echo get_the_post_thumbnail($pid); ?></div>
-										</a>
+									<?php if ( $product->is_on_sale() ) : ?>
+										<?php echo apply_filters( 'woocommerce_sale_flash', '', $post, $product ); ?>
+									<?php endif; ?>
+									<div class="ih-item">
+										<div class="img"><?php the_post_thumbnail('size-custom', array('sizes' => '(max-width: 768px) 300px, (max-width: 992px) 250px, 200px')); ?></div>
 									</div>
 								</div>
 								<div class="thong-tin-sp">
-									<h4><a href="<?php echo get_permalink($pid); ?>"><?php echo $p->post_title; ?></a></h4>
+									<h4><?php the_title(); ?></h4>
 									<p class="price"><?php echo $product->get_price_html(); ?></p>
 								</div>
-							</li>
-						</ul>
-                	</div>
-            	</div>
-				<?php endforeach; ?>
-        	</div>
+							</a>
+						</div>
+					</div>
+				<?php endwhile; endif; wp_reset_postdata(); ?>
+			</div> <!-- End Row 1 -->
+			<div class="row">
+			  <div class="title-decor">
+				<h2><?php if( $term = get_term_by( 'id', 440, 'product_cat' ) ){ echo $term->name; } ?></h2>
+					<b></b>
+					<div style="clear:both"></div>
+				</div>
+            	<?php
+					$the_query = new WP_Query(
+						array (
+							'post_type' => 'product',
+							'posts_per_page' => 4,
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'product_cat',
+									'field' => 'term_id',
+									'terms' => 440
+								)
+							),
+						)
+					);
+					if($the_query->have_posts()) :
+						while ($the_query->have_posts() ) : $the_query->the_post();
+							$product = wc_get_product( get_the_ID() );
+              	?>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-decor">
+						<div class="hservice product">
+							<a href="<?php the_permalink(); ?>">
+								<div class="block-image">
+									<?php if ( $product->is_on_sale() ) : ?>
+										<?php echo apply_filters( 'woocommerce_sale_flash', '', $post, $product ); ?>
+									<?php endif; ?>
+									<div class="ih-item">
+										<div class="img"><?php the_post_thumbnail('size-custom', array('sizes' => '(max-width: 768px) 300px, (max-width: 992px) 250px, 200px')); ?></div>
+									</div>
+								</div>
+								<div class="thong-tin-sp">
+									<h4><?php the_title(); ?></h4>
+									<p class="price"><?php echo $product->get_price_html(); ?></p>
+								</div>
+							</a>
+						</div>
+					</div>
+				<?php endwhile; endif; wp_reset_postdata(); ?>
+			</div> <!-- End Row 2 -->
+			<div class="row">
+			  <div class="title-decor">
+				<h2><?php if( $term = get_term_by( 'id', 454, 'product_cat' ) ){ echo $term->name; } ?></h2>
+					<b></b>
+					<div style="clear:both"></div>
+				</div>
+            	<?php
+					$the_query = new WP_Query(
+						array (
+							'post_type' => 'product',
+							'posts_per_page' => 4,
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'product_cat',
+									'field' => 'term_id',
+									'terms' => 454
+								)
+							),
+						)
+					);
+					if($the_query->have_posts()) :
+						while ($the_query->have_posts() ) : $the_query->the_post();
+							$product = wc_get_product( get_the_ID() );
+              	?>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-decor">
+						<div class="hservice product">
+							<a href="<?php the_permalink(); ?>">
+								<div class="block-image">
+									<?php if ( $product->is_on_sale() ) : ?>
+										<?php echo apply_filters( 'woocommerce_sale_flash', '', $post, $product ); ?>
+									<?php endif; ?>
+									<div class="ih-item">
+										<div class="img"><?php the_post_thumbnail('size-custom', array('sizes' => '(max-width: 768px) 300px, (max-width: 992px) 250px, 200px')); ?></div>
+									</div>
+								</div>
+								<div class="thong-tin-sp">
+									<h4><?php the_title(); ?></h4>
+									<p class="price"><?php echo $product->get_price_html(); ?></p>
+								</div>
+							</a>
+						</div>
+					</div>
+				<?php endwhile; endif; wp_reset_postdata(); ?>
+			</div> <!-- End Row 3 -->
+			<div class="row">
+			  <div class="title-decor">
+				<h2><?php if( $term = get_term_by( 'id', 453, 'product_cat' ) ){ echo $term->name; } ?></h2>
+					<b></b>
+					<div style="clear:both"></div>
+				</div>
+            	<?php
+					$the_query = new WP_Query(
+						array (
+							'post_type' => 'product',
+							'posts_per_page' => 4,
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'product_cat',
+									'field' => 'term_id',
+									'terms' => 453
+								)
+							),
+						)
+					);
+					if($the_query->have_posts()) :
+						while ($the_query->have_posts() ) : $the_query->the_post();
+							$product = wc_get_product( get_the_ID() );
+              	?>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-decor">
+						<div class="hservice product">
+							<a href="<?php the_permalink(); ?>">
+								<div class="block-image">
+									<?php if ( $product->is_on_sale() ) : ?>
+										<?php echo apply_filters( 'woocommerce_sale_flash', '', $post, $product ); ?>
+									<?php endif; ?>
+									<div class="ih-item">
+										<div class="img"><?php the_post_thumbnail('size-custom', array('sizes' => '(max-width: 768px) 300px, (max-width: 992px) 250px, 200px')); ?></div>
+									</div>
+								</div>
+								<div class="thong-tin-sp">
+									<h4><?php the_title(); ?></h4>
+									<p class="price"><?php echo $product->get_price_html(); ?></p>
+								</div>
+							</a>
+						</div>
+					</div>
+				<?php endwhile; endif; wp_reset_postdata(); ?>
+        	</div> <!-- End Row 4 -->
         </div>
     </div>
 
