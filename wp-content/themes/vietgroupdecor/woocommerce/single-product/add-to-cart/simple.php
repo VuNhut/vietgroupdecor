@@ -33,8 +33,8 @@ if ( $product->is_in_stock() ) : ?>
 
 	<form class="cart" method="post" enctype='multipart/form-data'>
 
-		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt">Mua ngay <p>Đặt hàng trực tiếp trên website</p></button>
-		<a href="tel:0946410840" class="call-buy-product">Gọi ngay <p>Đặt hàng qua điện thoại</p></a>
+		<!-- <button type="submit" name="add-to-cart" value="<?php //echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt">Mua ngay <p>Đặt hàng trực tiếp trên website</p></button> -->
+		<a href="tel:0903347866" class="col-sm-12 call-buy-product">Gọi ngay: <span>0903 347 866</span> <p>Đặt hàng qua điện thoại</p></a>
 		<?php
 			/**
 			 * @since 2.1.0.

@@ -19,17 +19,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
-<script type="text/javascript">
-	$(document).scroll(function() {
-	    var y = $(document).scrollTop(), //get page y value 
-	        header = $("#text-10"); // your div id
-	    if(y >= 180)  {
-	        header.css({position: "fixed", "top" : "0", "width" : "390px", "margin" : "0", "z-index" : "1"});
-	    } else {
-	    	header.css({position: "static"});
-	    }
-	});
-</script>
+
 </head>
 
 <body <?php body_class(); ?>>

@@ -278,15 +278,11 @@ function vietgroupdecor_setup() {
 }
 
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
-remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
-remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 15 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 11 );
 add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 
 function woo_remove_product_tabs( $tabs ) {
-    unset( $tabs['additional_information'] );   // Remove the additional information tab
-    return $tabs;
+  unset( $tabs['additional_information'] );   // Remove the additional information tab
+  return $tabs;
 }
 
 add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
@@ -298,41 +294,41 @@ function woo_rename_tabs( $tabs ) {
 // Show Discount Price
 add_filter( 'woocommerce_get_price_html', 'change_displayed_sale_price_html', 10, 2 );
 function change_displayed_sale_price_html( $price, $product ) {
-    if( $product->is_on_sale() && ! is_admin() && ! $product->is_type('variable')){
-        $regular_price = (float) $product->get_regular_price();
-        $sale_price = (float) $product->get_price();
+  if( $product->is_on_sale() && ! is_admin() && ! $product->is_type('variable')){
+    $regular_price = (float) $product->get_regular_price();
+    $sale_price = (float) $product->get_price();
 
-        $saving_price = wc_price( $regular_price - $sale_price );
+    $saving_price = wc_price( $regular_price - $sale_price );
 
-        $price .= sprintf( __('<p class="saved-sale"><strong>Tiết kiệm:</strong> %s</p>', 'woocommerce' ), $saving_price );
-    }
-    return $price;
+    $price .= sprintf( __('<p class="saved-sale"><strong>Tiết kiệm:</strong> %s</p>', 'woocommerce' ), $saving_price );
+  }
+  return $price;
 }
 
 // Show Discount Percent
 add_filter( 'woocommerce_sale_flash', 'add_percentage_to_sale_badge', 20, 3 );
 function add_percentage_to_sale_badge( $html, $post, $product ) {
-    if( $product->is_type('variable')){
-        $percentages = array();
+  if( $product->is_type('variable')){
+    $percentages = array();
 
-        // Get all variation prices
-        $prices = $product->get_variation_prices();
+    // Get all variation prices
+    $prices = $product->get_variation_prices();
 
-        // Loop through variation prices
-        foreach( $prices['price'] as $key => $price ){
-            // Only on sale variations
-            if( $prices['regular_price'][$key] !== $price ){
-                // Calculate and set in the array the percentage for each variation on sale
-                $percentages[] = round(100 - ($prices['sale_price'][$key] / $prices['regular_price'][$key] * 100));
-            }
+    // Loop through variation prices
+    foreach( $prices['price'] as $key => $price ){
+        // Only on sale variations
+        if( $prices['regular_price'][$key] !== $price ){
+            // Calculate and set in the array the percentage for each variation on sale
+            $percentages[] = round(100 - ($prices['sale_price'][$key] / $prices['regular_price'][$key] * 100));
         }
-        // We keep the highest value
-        $percentage = max($percentages) . '%';
-    } else {
-        $regular_price = (float) $product->get_regular_price();
-        $sale_price    = (float) $product->get_sale_price();
-
-        $percentage    = round(100 - ($sale_price / $regular_price * 100)) . '%';
     }
-    return '<p class="onsale"> -' . $percentage . '</p>';
+    // We keep the highest value
+    $percentage = max($percentages) . '%';
+  } else {
+    $regular_price = (float) $product->get_regular_price();
+    $sale_price    = (float) $product->get_sale_price();
+
+    $percentage    = round(100 - ($sale_price / $regular_price * 100)) . '%';
+  }
+  return '<p class="onsale"> -' . $percentage . '</p>';
 }
