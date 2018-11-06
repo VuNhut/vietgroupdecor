@@ -16,41 +16,6 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<div role="form" class="wpcf7" id="wpcf7-f1450-p1464-o1" lang="vi" dir="ltr">
-			<div class="screen-reader-response"></div>
-			<form action="#wpcf7-f1450-p1464-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-				<h3>Đặt Hàng Online</h3>
-				<div style="display: none;">
-					<input type="hidden" name="_wpcf7" value="1450">
-					<input type="hidden" name="_wpcf7_version" value="4.7">
-					<input type="hidden" name="_wpcf7_locale" value="vi">
-					<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1450-p1464-o1">
-					<input type="hidden" name="_wpnonce" value="e5e4e0791c">
-				</div>
-				<div class="hoten">
-					<p>Họ Tên *</p>
-				    <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span>
-				</div>
-				<div class="sdt">
-					<p>Điện Thoại *</p>
-				    <span class="wpcf7-form-control-wrap tel-242"><input type="tel" name="tel-242" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false"></span>
-				</div>
-				<div class="email">
-					<p>Email (nếu có)</p>
-				    <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false">
-				</div>
-				<div style="clear:both"></div>
-				<div class="noidung-tuvan">
-					<p>Nội dung đặt hàng</p>
-				    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="2" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span>
-				</div>
-				<div class="gui-yeu-cau">
-					<div class="wpcf7-response-output wpcf7-display-none"></div>
-					<div class="button-gui"><input type="submit" value="Gửi yêu cầu đặt hàng" class="wpcf7-form-control wpcf7-submit btn btn-default"></div>
-				</div>
-				<p class="chuthich-tuvan">* Vui lòng điền đầy đủ và chính xác những thông tin bên trên. Chúng tôi sẽ gọi điện thoại trực tiếp hoặc gửi email cho bạn ngay khi nhận được đơn đặt hàng</p>
-			</form>
-		</div>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(

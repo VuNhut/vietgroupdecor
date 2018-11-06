@@ -563,6 +563,20 @@ object {
 .widget {
   margin: 10px 0 0;
 }
+#secondary .widget {
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+#secondary .widget:last-child {
+  margin-bottom: 0;
+}
+#secondary .widget.widget_media_image {
+  padding: 0;
+}
+#secondary .widget.widget_media_image img {
+  width: 100%;
+}
 
 /* Make sure select elements fit in widgets */
 .widget select {
@@ -608,8 +622,12 @@ li.recentcomments {
     padding: 10px 10px;
 }
 .widget-title {
-  border-bottom: 1px solid #eee;
-  font-size: 23px;
+  border-bottom: 2px solid #f69021;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+  padding-bottom: 5px;
 }
 .widget ul.nav.nav-tabs {
   padding: 0;
@@ -641,11 +659,9 @@ a.social_link:hover {
 .tab-content ul li {
   list-style: none;
 }
-#secondary {
-  padding-top: 20px;
-}
 .single-product #secondary {
-  padding: 0;
+  padding-right: 0;
+  margin: 7px 0;
 }
 #secondary .widget_archive ul li:before,
 #secondary .widget_categories ul li:before,
@@ -963,7 +979,7 @@ a.social_link:hover {
 }
 .nav.navbar-nav {
   float: none;
-  font-size: 16px;
+  font-size: 17px;
   width: 1170px;
   margin: auto;
 }
@@ -1514,6 +1530,7 @@ h2.main-title {
   position: relative;
   background: #ffffff;
   margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 .hservice .onsale, .woocommerce div.product .onsale {
   position: absolute;
@@ -1554,8 +1571,15 @@ h2.main-title {
 .hservice .saved-sale span {
   font-size: 16px;
 }
+.product_list_widget .saved-sale {
+  font-size: 13px;
+  margin: 0;
+}
+.product_list_widget .saved-sale span.amount, .product_list_widget .saved-sale span.amount span {
+  font-size: 14px;
+  color: #f69021;
+}
 .saved-sale span, .hservice .thong-tin-sp .price {
-  font-size: 16px;
   color: #c10017;
   font-weight: bold;
   font-size: 18px;
@@ -1563,6 +1587,9 @@ h2.main-title {
 }
 .saved-sale strong {
   margin-right: 5px;
+}
+.product_list_widget .saved-sale strong {
+  margin-right: 0;
 }
 .hservice .thong-tin-sp del span, .hservice .thong-tin-sp .price del {
   color: #999;
@@ -1619,10 +1646,6 @@ h2.main-title {
 .woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
   width: 56%;
 }
-.woocommerce div.product div.images img {
-  width: auto;
-  margin: auto;
-}
 .woocommerce .woocommerce-breadcrumb {
   margin: 10px 0;
   font-size: 15px;
@@ -1649,8 +1672,18 @@ h2.main-title {
   color: inherit;
   font-size: 19px;
 }
-.woocommerce div.product .entry-summary p.price ins {
+.woocommerce div.product .entry-summary p.price ins, .product_list_widget li ins {
   text-decoration: none;
+}
+.product_list_widget li span.amount {
+  font-weight: bold;
+  font-size: 15px;
+  color: #c10017;
+}
+.product_list_widget li del span.amount {
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
 }
 .woocommerce div.product p.price, .woocommerce div.product span.price {
   color: inherit;
@@ -1671,7 +1704,7 @@ h2.main-title {
   color: #fff;
 }
 .product_meta .sku_wrapper {
-  margin-right: 15px;
+  display: block;
 }
 .product_meta .sku_wrapper:before {
   font-family: FontAwesome;
@@ -1724,16 +1757,12 @@ h2.main-title {
   margin: 0;
 }
 .call-buy-product:hover {
-  background-color: #ee2d1b;
-  color: #ffffff;
+  background-color: rgba(255, 221, 0, 0.7);
 }
 .call-buy-product span {
   color: #ec0606;
   font-size: 19px;
   transition: 0.4s ease-in-out;
-}
-.call-buy-product:hover span {
-  color: #ffffff;
 }
 .woocommerce-product-details__short-description p {
   background: #f4f4f4;
@@ -1757,13 +1786,18 @@ h2.main-title {
   margin-bottom: 0;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs {
-  margin: 0 0 5px 0;
+  margin: 0 0 15px 0;
+  padding: 0 0 0 5px;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+  z-index: 0;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
-  font-size: 16px;
+  font-size: 17px;
+  padding: 5px 15px;
 }
 .woocommerce div.product .woocommerce-tabs .panel {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 .woocommerce-Tabs-panel h2, .woocommerce-Tabs-panel h3, .woocommerce-Tabs-panel h4, .woocommerce-Tabs-panel h5, .woocommerce-Tabs-panel h6 {
   margin: 0;
@@ -1838,6 +1872,32 @@ form.woocommerce-checkout h3 {
 .woocommerce-order-received .woocommerce-thankyou-order-received {
   font-size: 24px;
   margin-bottom: 20px;
+}
+.woocommerce ul.product_list_widget li {
+  margin-bottom: 5px;
+}
+.woocommerce ul.product_list_widget li:last-child {
+  margin-bottom: 0;
+}
+.woocommerce ul.product_list_widget li ins {
+  display: block;
+}
+.woocommerce ul.product_list_widget li a {
+  font-size: 15px;
+  color: #444;
+}
+.woocommerce ul.product_list_widget li img {
+  width: 100px;
+  float: left;
+  margin-right: 10px;
+  margin-left: 0;
+}
+.woocommerce ul.product_list_widget li a span {
+  display: block;
+  width: calc(100% - 110px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media screen and (min-width:320px) and (max-width:1170px){
