@@ -186,7 +186,8 @@ function dazzling_header_menu() {
     'theme_location'    => 'primary',
     'depth'             => 2,
     'container'         => 'div',
-    'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+    'container_class'   => 'collapse navbar-collapse',
+    'container_id'	    => 'menu-main',
     'menu_class'        => 'nav navbar-nav',
     'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
     'walker'            => new wp_bootstrap_navwalker()

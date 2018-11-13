@@ -7,6 +7,7 @@
  * @package dazzling
  */
 ?>
+		</div>
 	</div><!-- #content -->
 	<div id="footer-area">
 		<div class="container footer-inner">

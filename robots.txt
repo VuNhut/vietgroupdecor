@@ -8,4 +8,4 @@ Disallow: /trackback/
 Disallow: /xmlrpc.php
 Disallow: /go/
 
-Sitemap: http://matonghoathiennhien.vn/sitemap_index.xml
+Sitemap: http://vietgroupdecor.vn/sitemap_index.xml

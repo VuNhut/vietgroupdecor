@@ -62,8 +62,9 @@ add_action('woocommerce_before_main_content', 'dazzling_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'dazzling_wrapper_end', 10);
 
 function dazzling_wrapper_start() {
-  echo '<div id="content" class="site-content container">';
-  echo '<div id="primary" class="content-area col-sm-12 col-md-9 '.of_get_option('site_layout').' ">';
+  is_product_category() ? $col_class = "" : $col_class = "col-md-9";
+  echo '<div id="content" class="site-content container"><div class="row">';
+  echo '<div id="primary" class="content-area col-sm-12 '. $col_class .'' .of_get_option('site_layout').' ">';
   echo '<main id="main" class="site-main" role="main">';
 }
 

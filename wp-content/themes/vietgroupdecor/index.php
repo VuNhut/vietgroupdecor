@@ -16,46 +16,19 @@ get_header(); ?>
 		<?php dazzling_featured_slider(); ?>
 
 		<?php dazzling_call_for_action(); ?>
-		<div class="box-tin-tuc">
-			<div class="tin-tuc">
-				<h2>Tin tức</h2>
-				<b></b>
-				<div style="clear:both"></div>
-			</div>
-			<div class="news-info">
-				<?php
-	                $the_query = new WP_Query(
-	                    array (
-							'cat' => 441,
-							'post_type' => 'post',
-							'posts_per_page' => 3,
-	                    )
-	                );
-					$i = 0;
-					if ($the_query->have_posts()) :
-	                while ( $the_query->have_posts() ) {
-	                    $the_query->the_post();
-	                    $i++;
-	            ?>
-				<div class="info <?php if ($i == 3) { echo 'no-border-bottom'; } ?>">
-					<div class="title">
-						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-						<p>Ngày đăng: <?php echo get_the_date( 'd/m/Y' ); ?></p>
-					</div>
-					<div class="img-news">
-						<?php the_post_thumbnail(array(109, 69)); ?>
-					</div>
-					<div style="clear:both"></div>
-				</div>
-				<?php } endif; wp_reset_postdata(); ?>
-			</div>
+		<div class="box-banner">
+			<?php $args_banner = array('category_name' => 'banner-home', 'posts_per_page' => 1); ?>
+			<?php $query_banner = new WP_Query($args_banner); ?>
+			<?php if ($query_banner->have_posts()) : while ($query_banner->have_posts()) : $query_banner->the_post(); ?>
+			<?php the_post_thumbnail('img-responsive', array( 'sizes' => '(max-width:320px) 300px, (max-width:425px) 400px, 382px' )); ?>
+			<?php endwhile; endif; ?>
 		</div>
 		<div style="clear:both"></div>
 	</div>
 	<div class="boxso" class="content-area">
       	<div class="container">
           	<div class="row">
-			  <div class="title-decor">
+			  <div class="col-12 title-decor">
 				<h2><?php if( $term = get_term_by( 'id', 455, 'product_cat' ) ){ echo $term->name; } ?></h2>
 					<b></b>
 					<div style="clear:both"></div>
@@ -78,7 +51,7 @@ get_header(); ?>
 						while ($the_query->have_posts() ) : $the_query->the_post();
 							$product = wc_get_product( get_the_ID() );
               	?>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-decor">
+					<div class="col-lg-3 col-md-4 col-6 item-decor">
 						<div class="hservice product">
 							<a href="<?php the_permalink(); ?>">
 								<div class="block-image">
@@ -99,7 +72,7 @@ get_header(); ?>
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</div> <!-- End Row 1 -->
 			<div class="row">
-			  <div class="title-decor">
+			  <div class="col-12 title-decor">
 				<h2><?php if( $term = get_term_by( 'id', 440, 'product_cat' ) ){ echo $term->name; } ?></h2>
 					<b></b>
 					<div style="clear:both"></div>
@@ -122,7 +95,7 @@ get_header(); ?>
 						while ($the_query->have_posts() ) : $the_query->the_post();
 							$product = wc_get_product( get_the_ID() );
               	?>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-decor">
+					<div class="col-lg-3 col-md-4 col-6 item-decor">
 						<div class="hservice product">
 							<a href="<?php the_permalink(); ?>">
 								<div class="block-image">
@@ -143,7 +116,7 @@ get_header(); ?>
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</div> <!-- End Row 2 -->
 			<div class="row">
-			  <div class="title-decor">
+			  <div class="col-12 title-decor">
 				<h2><?php if( $term = get_term_by( 'id', 454, 'product_cat' ) ){ echo $term->name; } ?></h2>
 					<b></b>
 					<div style="clear:both"></div>
@@ -166,7 +139,7 @@ get_header(); ?>
 						while ($the_query->have_posts() ) : $the_query->the_post();
 							$product = wc_get_product( get_the_ID() );
               	?>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-decor">
+					<div class="col-lg-3 col-md-4 col-6 item-decor">
 						<div class="hservice product">
 							<a href="<?php the_permalink(); ?>">
 								<div class="block-image">
@@ -187,7 +160,7 @@ get_header(); ?>
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</div> <!-- End Row 3 -->
 			<div class="row">
-			  <div class="title-decor">
+			  <div class="col-12 title-decor">
 				<h2><?php if( $term = get_term_by( 'id', 453, 'product_cat' ) ){ echo $term->name; } ?></h2>
 					<b></b>
 					<div style="clear:both"></div>
@@ -210,7 +183,7 @@ get_header(); ?>
 						while ($the_query->have_posts() ) : $the_query->the_post();
 							$product = wc_get_product( get_the_ID() );
               	?>
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-decor">
+					<div class="col-lg-3 col-md-4 col-6 item-decor">
 						<div class="hservice product">
 							<a href="<?php the_permalink(); ?>">
 								<div class="block-image">
